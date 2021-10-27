@@ -15,54 +15,54 @@ public class Course {
 		this.endDate = endDate;
 	}
 	
-	String getCourseName() {
+	public String getCourseName() {
 		return courseName;
 	}
 	
-	ArrayList<Module> getModules(){
+	public ArrayList<Module> getModules(){
 		return modules;
 	}
 	
-	ArrayList<Student> getStudents(){
+	public ArrayList<Student> getStudents(){
 		return students;
 	}
 	
-	LocalDate getStartDate() {
+	public LocalDate getStartDate() {
 		return startDate;
 	}
 	
-	LocalDate getEndDate() {
+	public LocalDate getEndDate() {
 		return endDate;
 	}
 	
 	//Mutator methods
-	void setCourseName(String setCourseName) {
+	public void setCourseName(String setCourseName) {
 		courseName = setCourseName;
 	}
 	
-	void setModules(ArrayList<Module> setModules) {
+	public void setModules(ArrayList<Module> setModules) {
 		modules = setModules;
 	}
 	
-	void setStudents(ArrayList<Student> setStudents) {
+	public void setStudents(ArrayList<Student> setStudents) {
 		students = setStudents;
 	}
 	
-	void setStartDate(LocalDate setStartDate) {
+	public void setStartDate(LocalDate setStartDate) {
 		startDate = setStartDate;
 	}
 	
-	void setEndDate(LocalDate setEndDate) {
+	public void setEndDate(LocalDate setEndDate) {
 		endDate = setEndDate;
 	}
 	
 	//When adding students to a module, the module is also added to the student
-	void addStudent(Student student) {
+	public void addStudent(Student student) {
 		students.add(student);
 		student.addCourse(this);
 	}
 	
-	void addModule(Module module) {
+	public void addModule(Module module) {
 		modules.add(module);
 	}
 

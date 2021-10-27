@@ -17,19 +17,19 @@ public class Module {
 	 * Accessor methods
 	 */
 	
-	String getModuleName() {
+	public String getModuleName() {
 		return moduleName;
 	}
 	
-	String getID() {
+	public String getID() {
 		return ID;
 	}
 	
-	ArrayList<Student> getStudents(){
+	public ArrayList<Student> getStudents(){
 		return students;
 	}
 	
-	ArrayList<Course> getCourses(){
+	public ArrayList<Course> getCourses(){
 		return courses;
 	}
 	
@@ -37,11 +37,11 @@ public class Module {
 	 * Mutator methods
 	 */
 	
-	void setModuleName(String setModuleName) {
+	public void setModuleName(String setModuleName) {
 		moduleName = setModuleName;
 	}
 	
-	void setID(String setID) {
+	public void setID(String setID) {
 		ID = setID;
 	}
 	
@@ -51,7 +51,7 @@ public class Module {
 		student.addModule(this);
 	}
 	
-	void addCourse(Course course) {
+	public void addCourse(Course course) {
 		courses.add(course);
 	}
 }

@@ -21,7 +21,7 @@ int age;
 		this.username = getUsername();
 	}
 	
-	String getUsername(){
+	public String getUsername(){
 		return name+age; 
 	}
 	
@@ -29,27 +29,27 @@ int age;
 	 * Accessor methods
 	 */
 	
-	String getName() {
+	public String getName() {
 		return name;
 	}
 	
-	int getAge() {
+	public int getAge() {
 		return age;
 	}
 	
-	String getDOB() {
+	public String getDOB() {
 		return DOB;
 	}
 	
-	String getID() {
+	public String getID() {
 		return ID;
 	}
 	
-	ArrayList<Course> getCourse() {
+	public ArrayList<Course> getCourse() {
 		return courses;
 	}
 	
-	ArrayList<Module> getModule() {
+	public ArrayList<Module> getModule() {
 		return modules;
 	}
 	
@@ -57,27 +57,27 @@ int age;
 	 * Mutator methods
 	 */
 	
-	void setName(String setName) {
+	public void setName(String setName) {
 		name = setName;
 	}
 	
-	void setAge(int setAge) {
+	public void setAge(int setAge) {
 		age = setAge;
 	}
 	
-	void setDOB(String setDOB) {
+	public void setDOB(String setDOB) {
 		DOB = setDOB;
 	}
 	
-	void setID(String setID) {
+	public void setID(String setID) {
 		ID = setID;
 	}
 	
-	void setUsername(String setUsername) {
+	public void setUsername(String setUsername) {
 		username = setUsername;
 	}
 	
-	void addCourse(Course setCourse) {
+	public void addCourse(Course setCourse) {
 		courses.add(setCourse);
 	}
 	
