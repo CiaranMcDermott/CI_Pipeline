@@ -46,7 +46,7 @@ public class Module {
 	}
 	
 	//When adding students to a module, the module is also added to the student
-	void addStudent(Student student) {
+	public void addStudent(Student student) {
 		students.add(student);
 		student.addModule(this);
 	}

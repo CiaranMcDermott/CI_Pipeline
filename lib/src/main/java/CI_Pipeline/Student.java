@@ -81,7 +81,7 @@ int age;
 		courses.add(setCourse);
 	}
 	
-	void addModule(Module setModule) {
+	public void addModule(Module setModule) {
 		modules.add(setModule);
 	}
 	
