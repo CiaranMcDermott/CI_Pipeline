@@ -36,10 +36,17 @@ public class JUnitTests {
 		module.setModuleName("SOC");
 		System.out.println(module.getModuleName());
 		
-		System.out.print("Students: ");
-		for(Student student: module.getStudents()) {
-			System.out.print(student.getUsername() + ", ");
-		}
+		//Check if student objects are correct
+		assertEquals(student0, module.getStudents().get(0));
+		
+		//Check if getModuleName() works
+		assertEquals("SOC", module.getModuleName());
+		
+		
+//		System.out.print("Students: ");
+//		for(Student student: module.getStudents()) {
+//			System.out.print(student.getUsername() + ", ");
+//		}
 	}
 	
 	

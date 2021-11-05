@@ -64,6 +64,7 @@ public class Course {
 	
 	public void addModule(Module module) {
 		modules.add(module);
+		module.addCourse(this);
 	}
 
 }
