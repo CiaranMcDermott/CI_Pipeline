@@ -2,8 +2,6 @@ package CI_Pipeline;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-
 import org.junit.Test;
 import org.joda.time.LocalDate;
 
@@ -31,22 +29,22 @@ public class JUnitTests {
 		
 		//Test getModuleName method and print variable values
 		System.out.println(module.getModuleName());
+		assertEquals("System on Chip", module.getModuleName());
 		
 		//change module name and print again
 		module.setModuleName("SOC");
 		System.out.println(module.getModuleName());
 		
-		//Check if student objects are correct
-		assertEquals(student0, module.getStudents().get(0));
-		
 		//Check if getModuleName() works
 		assertEquals("SOC", module.getModuleName());
 		
-		
-//		System.out.print("Students: ");
-//		for(Student student: module.getStudents()) {
-//			System.out.print(student.getUsername() + ", ");
-//		}
+		//Check if student objects are correct
+		assertEquals(student0, module.getStudents().get(0));
+					
+		System.out.print("Students: ");
+		for(Student student: module.getStudents()) {
+			System.out.print(student.getUsername() + ", ");
+		}
 	}
 	
 	
@@ -54,18 +52,6 @@ public class JUnitTests {
 	//Test some Course class methods
 	public void courseTests() {
 		System.out.println("\n\n****JUnit Test 2****");
-		
-		//Add modules to the course
-		ArrayList<String> modules = new ArrayList<String>();
-	    modules.add("Signals");
-	    modules.add("Maths");
-	    modules.add("System on Chip");
-	    
-	    //Add students to the module
-  		ArrayList<String> students = new ArrayList<String>();
-  	    students.add("Ciaran");
-  	    students.add("Joe");
-  	    students.add("Paddy");
   	    
   	    LocalDate startDate = LocalDate.parse("2021-09-08");
   	    LocalDate endDate = LocalDate.parse("2022-05-06");
@@ -73,12 +59,18 @@ public class JUnitTests {
 		//create Course object
 		Course course = new Course("Electronic Engineering", startDate, endDate);
 		
+		assertEquals("Electronic Engineering", course.getCourseName());
+		
 		//Test getStartDate() method and print output
 		System.out.println(course.getStartDate().toString());
+		
+		assertEquals(startDate, course.getStartDate());
 		
 		//Change start date with setStartDate() method and retrieve start date again
 		LocalDate newDate = LocalDate.parse("2021-09-28");
 		course.setStartDate(newDate);
+		assertEquals(newDate, course.getStartDate());
+		
 		System.out.println(course.getStartDate().toString());
 	}
 	
